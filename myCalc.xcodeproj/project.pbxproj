@@ -12,9 +12,12 @@
 		9D851B7121CE9B960085DA22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D851B6F21CE9B960085DA22 /* Main.storyboard */; };
 		9D851B7321CE9B980085DA22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D851B7221CE9B980085DA22 /* Assets.xcassets */; };
 		9D851B7621CE9B980085DA22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D851B7421CE9B980085DA22 /* LaunchScreen.storyboard */; };
+		A4FA87097C663446666512FF /* Pods_myCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56431D1F5E6EC96BA2098FFE /* Pods_myCalc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46DA755CB6ED2C48CAFC78E5 /* Pods-myCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myCalc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myCalc/Pods-myCalc.debug.xcconfig"; sourceTree = "<group>"; };
+		56431D1F5E6EC96BA2098FFE /* Pods_myCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D851B6821CE9B960085DA22 /* myCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D851B6B21CE9B960085DA22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D851B6D21CE9B960085DA22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		9D851B7221CE9B980085DA22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D851B7521CE9B980085DA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D851B7721CE9B980085DA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8478CBCFA51CB66EE7856A4 /* Pods-myCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myCalc.release.xcconfig"; path = "Pods/Target Support Files/Pods-myCalc/Pods-myCalc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FA87097C663446666512FF /* Pods_myCalc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75015947079E512D100AD5E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46DA755CB6ED2C48CAFC78E5 /* Pods-myCalc.debug.xcconfig */,
+				A8478CBCFA51CB66EE7856A4 /* Pods-myCalc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8D612C3F1C470398DBDEC722 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56431D1F5E6EC96BA2098FFE /* Pods_myCalc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D851B5F21CE9B960085DA22 = {
 			isa = PBXGroup;
 			children = (
 				9D851B6A21CE9B960085DA22 /* myCalc */,
 				9D851B6921CE9B960085DA22 /* Products */,
+				75015947079E512D100AD5E5 /* Pods */,
+				8D612C3F1C470398DBDEC722 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D851B7A21CE9B980085DA22 /* Build configuration list for PBXNativeTarget "myCalc" */;
 			buildPhases = (
+				6DFE5ED0C2A9A9C03E9D1EEC /* [CP] Check Pods Manifest.lock */,
 				9D851B6421CE9B960085DA22 /* Sources */,
 				9D851B6521CE9B960085DA22 /* Frameworks */,
 				9D851B6621CE9B960085DA22 /* Resources */,
+				1EFCA28DF0BC702963736F07 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EFCA28DF0BC702963736F07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-myCalc/Pods-myCalc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Expression/Expression.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expression.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-myCalc/Pods-myCalc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DFE5ED0C2A9A9C03E9D1EEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-myCalc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D851B6421CE9B960085DA22 /* Sources */ = {
@@ -280,6 +345,7 @@
 		};
 		9D851B7B21CE9B980085DA22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46DA755CB6ED2C48CAFC78E5 /* Pods-myCalc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +364,7 @@
 		};
 		9D851B7C21CE9B980085DA22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8478CBCFA51CB66EE7856A4 /* Pods-myCalc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
